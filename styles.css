@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Layout */
+
+header {
+  width: 100%;
+  background-color: #f8f8f8;
+  /* border: 2px solid magenta; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5em 0;
+}
+
+/* Typography */
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  font-family: "Lora", serif;
+  font-size: 2.5rem;
+  color: #143774;
+}
+
+#subtitle {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1792d2;
+  text-transform: uppercase;
+  word-spacing: 10px;
+}
+
+/* Navigation */
+
+nav a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.35rem;
+  color: #707070;
+  text-transform: uppercase;
+  padding: 0.25em 0;
+}
+
+nav {
+  /* border: 2px solid magenta; */
+  width: 25%;
+  min-width: 300px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #1792d2;
+}
+
+.current-page {
+  border-bottom: 1px solid #707070;
+}
+
+.current-page:hover {
+  color: #707070;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    padding: 2em 0;
+  }
+
+  nav {
+    padding-top: 3em;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    padding-top: 2em;
+  }
+}
+
+/* Content */
+
+.container {
+  display: flex;
+  margin: 5em auto;
+  width: 76.5%;
+  /* border: 2px solid magenta; */
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 78%;
+  /* border: 2px solid green; */
+  margin-right: 1em;
+}
+
+/* Featured Post */
+
+.featured-post {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #707070;
+}
+
+.featured-post-image {
+  background: url("./images/main.jpg");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 40vh;
+}
+
+.post-info {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1.5em 0;
+  color: #707070;
+}
+
+h1 {
+  font-family: "Lora", serif;
+  font-size: 1.2rem;
+  color: #143774;
+  margin-bottom: 1em;
+}
+
+.post-description {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: #707070;
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+}
+.bold {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: #707070;
+  font-weight: 700;
+}
+
+.decorated {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1792d2;
+  text-decoration: underline;
+}
+
+.post-more {
+  color: #1792d2;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 1.5em 0;
+}
+
+/* Main Recents */
+
+.post-recents {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-recent {
+  display: flex;
+  flex-direction: row;
+  margin: 3em 3em 0 0;
+}
+
+.post-recent-image-frame {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 3em 0 0;
+}
+
+.desc {
+  width: 100%;
+}
+
+.post-recent-image1 {
+  background: url(./images/post1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30vh;
+}
+
+.post-recent-image2 {
+  background: url(./images/post2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30vh;
+}
+
+.post-recent-image3 {
+  background: url(./images/post3.jpg);
+  background-size: cover;
+  background-position: left;
+  width: 100%;
+  height: 30vh;
+}
+
+/* aside */
+
+aside {
+  display: flex;
+  width: 22%;
+  /* border: 2px solid black; */
+  margin-left: 1em;
+  flex-direction: column;
+}
+
+.about-me-widget {
+  width: 100%;
+  height: 45vh;
+  background-color: white;
+  border: 20px solid #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.widget-image {
+  width: 80%;
+  height: 40%;
+  background: url(./images/man.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: -1em 0 2em 0;
+}
+
+.about-me-widget h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-me-widget p {
+  color: #143774;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.08rem;
+  margin: 0 0.5em;
+  text-align: center;
+}
+
+.post-recents-widget {
+  margin-top: 5em;
+  width: 100%;
+  height: 90vh;
+  background-color: white;
+  border: 20px solid #ebebeb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 1em;
+}
+
+/* .post-recents-widget div {
+  height: 33.3%;
+} */
+
+.recent-post-aside-image1 {
+  background: url(./images/post1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 75%;
+  height: 15vh;
+  margin-left: 1em;
+}
+
+.recent-post-aside-image2 {
+  background: url(./images/post2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  height: 15vh;
+}
+
+.recent-post-aside-image3 {
+  background: url(./images/post3.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  height: 15vh;
+}
+
+.post-recents-widget p {
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  color: #143774;
+  max-width: 90%;
+}
+
+.post-recents-widget h1 {
+  max-width: 90%;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  height: 13vh;
+  background-color: #143774;
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  width: 30%;
+  height: 50%;
+  /* border: 2px solid magenta; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer #top {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+footer #bottom {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  opacity: 54%;
+}
+
+@media (max-width: 900px) {
+  * {
+    font-size: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  aside {
+    flex-direction: row;
+    width: 100%;
+    order: 1;
+    margin: 0;
+  }
+  main {
+    width: 100%;
+    margin: 0 auto;
+    order: 2;
+  }
+  .post-recents-widget {
+    display: none;
+  }
+  .about-me-widget {
+    border: none;
+  }
+  .widget-image {
+    width: 30%;
+    height: 15vh;
+  }
+  .logo {
+    text-align: center;
+  }
+  .post-recent {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .post-recent-image-frame {
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+}
